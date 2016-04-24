@@ -11,14 +11,6 @@
 			width: 100%;
 			font-family:  Arial;
 		}
-		#blueBar {
-			position:fixed;
-			top:0;
-			left:0;
-			width:100%;
-			height:60px;
-			background-color: #2371f2;
-		}
 		ul {
 			width: 70%;
 			margin: 0 auto;
@@ -30,14 +22,18 @@
 			height: 50px;
 			background: #fff;
 			margin-bottom: 1px;
-			padding: 2px 15px;
+			padding: 2px 0px;
+		}
+		a {
+			color: #fff;
+			text-decoration: none;
 		}
 		.item_input {
-			width: 90%;
+			width: 100%;
 			box-sizing: border-box;
-			padding: 10px 5px;
+			padding: 10px 30px 10px 40px; 
 			border: 1px solid #fff;
-			line-height: 25px;
+			line-height: 28px;
 			font-size: 16px;
 		}
 		li h3 {
@@ -61,8 +57,9 @@
 		.item_mark {
 			margin: 0;
 			padding: 0;
-			width: 5%;
+			width: 50px;
 			float: left;
+			text-align: center;
 		}
 		.item_content {
 			margin: 0;
@@ -74,28 +71,136 @@
 		.clrfix {
 			clear:both;
 		}
+		.item_mark a {
+			line-height: 50px;
+			text-decoration: none;
+		}
+		.blink {
+			color: #000;
+			text-decoration: none;
+		}
+		.glink {
+			color: #adadad;
+			text-decoration: none;
+		}
+		textarea:focus, input:focus{
+    		outline: #adadad;
+    		border-bottom: 2px solid #2371f2;
+		}
+
+		.img-rounded {
+			border-radius: 50%;
+			line-height: 20px;
+			border: 2px solid #fff;
+			float: left;
+		}
+		#blueBar {
+			position:fixed;
+			top:0;
+			left:0;
+			width:100%;
+			height:60px;
+			background-color: #2371f2;
+		}
+		#profile {
+			float: right;
+			margin-right: 40px;
+		}
+		#profile a {
+			display: block;
+			line-height: 50px;
+			height: 50px;
+			/*border: 1px solid #333;*/
+			margin: 8px 0px 0px 0px;
+		}
+		#profile a span {
+			line-height: 45px;
+			display: block;
+			float: left;
+			padding-left: 5px;
+			font-weight: 700;
+			font-size: 14px;
+		}
+		.img-icon {
+			margin-top: 10px;
+			/*border: 1px solid #333;*/
+			float: left;
+		}
+		.dropdown {
+			border: 1px solid transparent;
+			border-radius: 3px;
+			box-shadow: 0 1px 7px 2px rgba(135, 158, 171, .2);
+			margin-top: 6px;
+		}
+		.btn {
+			border-radius: 3px;
+			display: inline-block;
+			
+			height: 14px;
+			min-width: 14px;
+			font-size: 12px;
+			padding: 0 12px;
+			font-weight: 700;
+			text-align: center;
+		}
+		.btn-red {
+			background: #F44336;
+		}
 	</style>
 </head>
 <body>
 	<div id="sisu">
-		<div id="blueBar"></div>
+		<div id="blueBar">
+			<div id="menu"></div>
+			<div id="profile">
+				<a href="#" class="user-profile">
+					<img class="img-rounded" src="profile2.jpg"  height="40px">
+					<span>Aksel K.</span>
+					<img class="img-icon" src="arrow485.png">
+				</a>
+				<div class="dropdown">
+					<div class="button-pane">
+						<a href="#" class="btn btn-red">
+							Logout
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
 		<div id="cont">
 			<ul>
 				<li class="input">
-					<div class="item_mark">+</div>
 					<input type="text" class="item_input" placeholder="Start typing to add new note or idea">
 				</li>
 				<li>
-					<div class="item_mark">+</div>
+					<div class="item_mark"></div>
 					<div class="item_content">
 						<h3>Funny application for students in dorm</h3>
-						<span class="item_detail">Added by <span class="item_author"><a href="#">Mihkel M.</a></span>, 11 hours ago | 3 comments | 4 links </span>
+						<span class="item_detail">Added by <span class="item_author"><a href="#" class="blink">Mihkel M.</a></span>, 11 hours ago | <a href="#" class="glink">3 comments</a> | <a href="#"  class="glink">4 links</a></span>
 					</div>
-					<div class="clrfix"></div>
+					
 				</li>
-				<li></li>
-				<li></li>
-				<li></li>
+				<li>
+					<div class="item_mark"></div>
+					<div class="item_content">
+						<h3>Trip finder </h3>
+						<span class="item_detail">Added by <span class="item_author"><a href="#" class="blink">Aksel K.</a></span>, 1 hours ago | <a href="#" class="glink">0 comments</a> | <a href="#"  class="glink">1 links</a></span>
+					</div>
+				</li>
+				<li>
+					<div class="item_mark"></div>
+					<div class="item_content">
+						<h3>Randomiser for lunch locations</h3>
+						<span class="item_detail">Added by <span class="item_author"><a href="#" class="blink">Juhan M.</a></span>, 8 hours ago | <a href="#" class="glink">1 comments</a> | <a href="#"  class="glink">0 links</a></span>
+					</div>
+				</li>
+				<li>
+					<div class="item_mark"></div>
+					<div class="item_content">
+						<h3>Funny social game for friends</h3>
+						<span class="item_detail">Added by <span class="item_author"><a href="#" class="blink">Juhan M.</a></span>, 1 month ago | <a href="#" class="glink">17 comments</a> | <a href="#"  class="glink">11 links</a></span>
+					</div>
+				</li>
 				<li></li>
 				<li></li>
 				<li></li>
